@@ -5,32 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joyfully Present — Christian Life Coaching</title>
   <meta name="description" content="Christ-centered life coaching for Christian women—crafted for the joyful chaos of big families." />
-
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+CA:wght@100..400&display=swap" rel="stylesheet">
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            jp: {
-              salmon: '#FF9F8A',
-              salmonLight: '#FFE7E1',
-              navy: '#0E2240',
-              sand: '#F7F2EC',
-              ink: '#1F2430' /* added so text-jp-ink works */
-            }
-          },
-          fontFamily: {
-            display: ['"Playfair Display"','ui-serif','Georgia','serif'],
-            sans: ['Inter','ui-sans-serif','system-ui','sans-serif']
-          },
-          boxShadow: {
-            card: '0 14px 30px -18px rgba(14,34,64,.35)'
+    theme: {
+      extend: {
+        colors: {
+          jp: {
+            salmon: '#FF9F8A',
+            salmonLight: '#FFE7E1',
+            navy: '#0E2240',
+            sand: '#F7F2EC',
+            ink: '#1F2430'
           }
+        },
+        fontFamily: {
+          display: ['"Playfair Display"','ui-serif','Georgia','serif'],
+          sans: ['Inter','ui-sans-serif','system-ui','sans-serif'],
+          playwrite: ['"Playwrite CA"', 'serif']   // ← exact family name
+        },
+        boxShadow: {
+          card: '0 14px 30px -18px rgba(14,34,64,.35)'
         }
       }
     }
+  }
   </script>
 
   <!-- Fonts -->
@@ -91,36 +97,39 @@
     .shadow-card{
       box-shadow:0 14px 30px -18px rgba(14,34,64,.35);
     }
+
+    
   </style>
 </head>
 
 <body class="bg-white text-jp-ink font-sans antialiased">
 
   <!-- Top bar -->
-  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-neutral-100">
-    <nav class="container container-bleed mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-2">
-        <span class="w-8 h-8 rounded-full bg-jp-salmon/20 grid place-items-center">
-          <svg class="w-4 h-4 text-jp-salmon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 12l5-5 5 5M7 12l5 5 5-5"/></svg>
-        </span>
-        <span class="font-display text-xl tracking-tight text-jp-navy">Joyfully Present</span>
-      </a>
-      <div class="hidden md:flex items-center gap-8 text-sm">
-        <a href="#about" class="hover:text-jp-navy">About</a>
-        <a href="#coaching" class="hover:text-jp-navy">Coaching</a>
-        <a href="#packages" class="hover:text-jp-navy">Packages</a>
-        <a href="#stories" class="hover:text-jp-navy">Stories</a>
-        <a href="#resources" class="hover:text-jp-navy">Resources</a>
-        <a href="#contact" class="hover:text-jp-navy">Contact</a>
-      </div>
-      <a href="#contact" class="btn btn-primary">Book a Call</a>
-    </nav>
-  </header>
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-neutral-100">
+  <nav class="container container-bleed mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2">
+      <!-- logo only, no circle -->
+      <img src="/android-chrome-512x512.png" alt="Joyfully Present Logo" class="w-8 h-8" />
+      <span class="font-playwrite text-xl tracking-tight text-jp-navy">Joyfully Present</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm">
+      <a href="#about" class="hover:text-jp-navy">About</a>
+      <a href="#coaching" class="hover:text-jp-navy">Coaching</a>
+      <a href="#packages" class="hover:text-jp-navy">Packages</a>
+      <a href="#stories" class="hover:text-jp-navy">Stories</a>
+      <a href="#resources" class="hover:text-jp-navy">Resources</a>
+      <a href="#contact" class="hover:text-jp-navy">Contact</a>
+    </div>
+    <a href="#contact" class="btn btn-primary">Book a Call</a>
+  </nav>
+</header>
 
   <!-- Hero -->
   <section class="container container-bleed mx-auto px-4 sm:px-6 lg:px-8 pt-14 sm:pt-20 pb-14">
     <div class="grid lg:grid-cols-12 gap-10 items-center">
       <div class="lg:col-span-6">
+        <img src="/flower1.png" alt="" class="w-24 h-24" />
+        <br>
         <span class="pill">Christ-centered coaching</span>
         <h1 class="mt-4 font-display text-4xl sm:text-5xl leading-tight text-jp-navy">Feel calm, present, and confident in the beautiful chaos.</h1>
         <p class="mt-4 text-neutral-600 max-w-xl">Coaching for Christian women—especially moms of big families—who want gentle structure, biblical encouragement, and simple routines that actually fit real life.</p>
@@ -166,36 +175,47 @@
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="container container-bleed mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <div class="grid lg:grid-cols-12 gap-10 items-start">
-      <div class="lg:col-span-6">
-        <h2 class="font-display text-3xl text-jp-navy">Coaching that honors your season</h2>
-        <div class="prose mt-4 text-neutral-700 max-w-none">
-          <p>We’ll clarify what matters in this season and build simple rhythms that serve your people: morning and evening routines, a chore + meal matrix, tech boundaries, Sabbath planning, and margin for rest.</p>
-          <p>Every session is Christ-centered and practical, with follow-up notes and gentle check-ins so you’re never walking alone.</p>
-        </div>
-        <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm text-neutral-700">
-          <li class="flex gap-2"><span class="mt-1 w-2 h-2 rounded-full bg-jp-salmon"></span> Biblical encouragement & prayer</li>
-          <li class="flex gap-2"><span class="mt-1 w-2 h-2 rounded-full bg-jp-salmon"></span> Family-first systems</li>
-          <li class="flex gap-2"><span class="mt-1 w-2 h-2 rounded-full bg-jp-salmon"></span> Clear, doable next steps</li>
-          <li class="flex gap-2"><span class="mt-1 w-2 h-2 rounded-full bg-jp-salmon"></span> Support between sessions</li>
+<!-- About -->
+<section id="about" class="container container-bleed mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="grid gap-10 items-start lg:grid-cols-3">
+    <!-- 1) Text column (1/3 on lg) -->
+    <div>
+      <h2 class="font-display text-3xl text-jp-navy">Coaching that honors your season</h2>
+      <div class="prose mt-4 text-neutral-700 max-w-none">
+        <p>We’ll clarify what matters in this season and build simple rhythms that serve your people: morning and evening routines, a chore + meal matrix, tech boundaries, Sabbath planning, and margin for rest.</p>
+        <p>Every session is Christ-centered and practical, with follow-up notes and gentle check-ins so you’re never walking alone.</p>
+      </div>
+      <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm text-neutral-700">
+        <li class="flex gap-2"><span class="mt-1 w-2 h-2 rounded-full bg-jp-salmon"></span> Biblical encouragement & prayer</li>
+        <li class="flex gap-2"><span class="mt-1 w-2 h-2 rounded-full bg-jp-salmon"></span> Family-first systems</li>
+        <li class="flex gap-2"><span class="mt-1 w-2 h-2 rounded-full bg-jp-salmon"></span> Clear, doable next steps</li>
+        <li class="flex gap-2"><span class="mt-1 w-2 h-2 rounded-full bg-jp-salmon"></span> Support between sessions</li>
+      </ul>
+    </div>
+
+    <!-- 2) Salmon box column (1/3 on lg) -->
+    <div>
+      <div class="bg-jp-salmonLight rounded-3xl p-6 border border-jp-salmon/30">
+        <h3 class="font-display text-xl text-jp-navy">What we might work on</h3>
+        <ul class="mt-3 space-y-2 text-neutral-700 text-sm">
+          <li>• Two-thing mornings (Word + one task)</li>
+          <li>• Weekly meal anchors</li>
+          <li>• Phone-free evening reset</li>
+          <li>• Sabbath + hospitality rhythms</li>
+          <li>• Calling + capacity mapping</li>
         </ul>
       </div>
-      <div class="lg:col-span-5 lg:col-start-8">
-        <div class="bg-jp-salmonLight rounded-3xl p-6 border border-jp-salmon/30">
-          <h3 class="font-display text-xl text-jp-navy">What we might work on</h3>
-          <ul class="mt-3 space-y-2 text-neutral-700 text-sm">
-            <li>• Two-thing mornings (Word + one task)</li>
-            <li>• Weekly meal anchors</li>
-            <li>• Phone-free evening reset</li>
-            <li>• Sabbath + hospitality rhythms</li>
-            <li>• Calling + capacity mapping</li>
-          </ul>
-        </div>
-      </div>
     </div>
-  </section>
+
+    <!-- 3) Chair image column (1/3 on lg, visible on mobile) -->
+    <div class="flex justify-center lg:justify-end items-start">
+      <img src="/chair.png" alt="Chair" class="w-40 sm:w-48 lg:w-56 xl:w-64 h-auto" />
+    </div>
+  </div>
+</section>
+
+
+
 
   <!-- Packages -->
   <section id="packages" class="bg-neutral-50 border-y border-neutral-100">
@@ -252,18 +272,32 @@
     </div>
   </section>
 
-  <!-- Stories -->
-  <section id="stories" class="container container-bleed mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <div class="text-center max-w-2xl mx-auto">
-      <h2 class="font-display text-3xl text-jp-navy">What moms are saying</h2>
-      <p class="mt-2 text-neutral-600">Real stories of peace, presence, and progress.</p>
+<!-- Stories -->
+<section id="stories" class="relative container container-bleed mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <!-- Decorative tree -->
+  <img src="/tree.png" alt="" 
+       class="absolute top-0 left-0 h-full w-auto opacity-70 pointer-events-none select-none" />
+
+  <div class="relative text-center max-w-2xl mx-auto">
+    <h2 class="font-display text-3xl text-jp-navy">What moms are saying</h2>
+    <p class="mt-2 text-neutral-600">Real stories of peace, presence, and progress.</p>
+  </div>
+
+  <div class="relative mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="bg-white/70 rounded-2xl border border-neutral-100 p-6 shadow-card backdrop-blur-sm">
+      <p class="text-neutral-700">“Our evenings are calm now. The chore matrix stopped the nagging.”</p>
+      <div class="mt-3 text-xs text-neutral-500">— Rachel, mom of 7</div>
     </div>
-    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-white rounded-2xl border border-neutral-100 p-6 shadow-card"><p class="text-neutral-700">“Our evenings are calm now. The chore matrix stopped the nagging.”</p><div class="mt-3 text-xs text-neutral-500">— Rachel, mom of 7</div></div>
-      <div class="bg-white rounded-2xl border border-neutral-100 p-6 shadow-card"><p class="text-neutral-700">“Rooted gave me permission to be present—with rhythms I can keep.”</p><div class="mt-3 text-xs text-neutral-500">— Naomi, mom of 5</div></div>
-      <div class="bg-white rounded-2xl border border-neutral-100 p-6 shadow-card"><p class="text-neutral-700">“The Sabbath plan changed our weekends. We rest together now.”</p><div class="mt-3 text-xs text-neutral-500">— Leah, mom of 8</div></div>
+    <div class="bg-white/70 rounded-2xl border border-neutral-100 p-6 shadow-card backdrop-blur-sm">
+      <p class="text-neutral-700">“Rooted gave me permission to be present—with rhythms I can keep.”</p>
+      <div class="mt-3 text-xs text-neutral-500">— Naomi, mom of 5</div>
     </div>
-  </section>
+    <div class="bg-white/70 rounded-2xl border border-neutral-100 p-6 shadow-card backdrop-blur-sm">
+      <p class="text-neutral-700">“The Sabbath plan changed our weekends. We rest together now.”</p>
+      <div class="mt-3 text-xs text-neutral-500">— Leah, mom of 8</div>
+    </div>
+  </div>
+</section>
 
   <!-- Resources -->
   <section id="resources" class="bg-neutral-50 border-y border-neutral-100">
@@ -316,56 +350,86 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="bg-neutral-50 border-t border-neutral-100">
-    <div class="container container-bleed mx-auto px-4 sm:px-6 lg:px-8 py-16 grid lg:grid-cols-2 gap-10 items-start">
+<section id="contact" class="bg-neutral-50 border-t border-neutral-100">
+  <div class="container container-bleed mx-auto px-4 sm:px-6 lg:px-8 py-16 grid lg:grid-cols-2 gap-10 items-start">
+    <!-- Left column -->
+    <div>
+      <h2 class="font-display text-3xl text-jp-navy">Ready to feel present?</h2>
+      <p class="mt-3 text-neutral-700 max-w-xl">
+        Tell me about your season and I’ll recommend the best next step. I reply within one business day.
+      </p>
+      <div class="mt-6 text-sm text-neutral-600 space-y-2">
+        <div>• Flexible scheduling</div>
+        <div>• Clear, upfront pricing</div>
+        <div>• Prayerful support</div>
+      </div>
+
+      <!-- Decorative flower under the list -->
+      <div class="mt-6">
+        <img src="/flower2.png" alt="Decorative flower" class="w-24 sm:w-28 lg:w-32 h-auto" />
+      </div>
+    </div>
+
+    <!-- Right column (form) -->
+    <form
+      class="bg-white rounded-2xl border border-neutral-100 shadow-card p-6 space-y-4"
+      onsubmit="event.preventDefault(); alert('Thank you! I\'ll be in touch soon.');"
+    >
       <div>
-        <h2 class="font-display text-3xl text-jp-navy">Ready to feel present?</h2>
-        <p class="mt-3 text-neutral-700 max-w-xl">Tell me about your season and I’ll recommend the best next step. I reply within one business day.</p>
-        <div class="mt-6 text-sm text-neutral-600 space-y-2">
-          <div>• Flexible scheduling</div>
-          <div>• Clear, upfront pricing</div>
-          <div>• Prayerful support</div>
+        <label class="block text-sm text-neutral-700">Name</label>
+        <input
+          type="text"
+          required
+          class="mt-1 w-full rounded-xl border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-jp-salmon/40"
+        />
+      </div>
+      <div>
+        <label class="block text-sm text-neutral-700">Email</label>
+        <input
+          type="email"
+          required
+          class="mt-1 w-full rounded-xl border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-jp-salmon/40"
+        />
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm text-neutral-700">Family size</label>
+          <select
+            class="mt-1 w-full rounded-xl border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-jp-salmon/40"
+          >
+            <option>1–3 kids</option>
+            <option>4–6 kids</option>
+            <option>7–9 kids</option>
+            <option>10+ kids</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm text-neutral-700">Package</label>
+          <select
+            class="mt-1 w-full rounded-xl border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-jp-salmon/40"
+          >
+            <option>Refresh</option>
+            <option>Rooted</option>
+            <option>Flourish</option>
+            <option>Not sure yet</option>
+          </select>
         </div>
       </div>
-      <form class="bg-white rounded-2xl border border-neutral-100 shadow-card p-6 space-y-4" onsubmit="event.preventDefault(); alert('Thank you! I\'ll be in touch soon.');">
-        <div>
-          <label class="block text-sm text-neutral-700">Name</label>
-          <input type="text" required class="mt-1 w-full rounded-xl border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-jp-salmon/40" />
-        </div>
-        <div>
-          <label class="block text-sm text-neutral-700">Email</label>
-          <input type="email" required class="mt-1 w-full rounded-xl border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-jp-salmon/40" />
-        </div>
-        <div class="grid sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-sm text-neutral-700">Family size</label>
-            <select class="mt-1 w-full rounded-xl border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-jp-salmon/40">
-              <option>1–3 kids</option>
-              <option>4–6 kids</option>
-              <option>7–9 kids</option>
-              <option>10+ kids</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-sm text-neutral-700">Package</label>
-            <select class="mt-1 w-full rounded-xl border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-jp-salmon/40">
-              <option>Refresh</option>
-              <option>Rooted</option>
-              <option>Flourish</option>
-              <option>Not sure yet</option>
-            </select>
-          </div>
-        </div>
-        <div>
-          <label class="block text-sm text-neutral-700">Message</label>
-          <textarea rows="4" class="mt-1 w-full rounded-xl border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-jp-salmon/40" placeholder="Tell me about your current season..."></textarea>
-        </div>
-        <!-- Request a call styled the same navy -->
-        <button class="w-full btn btn-primary">Request a Call</button>
-        <p class="text-xs text-neutral-500">By submitting, you agree to a brief email follow-up.</p>
-      </form>
-    </div>
-  </section>
+      <div>
+        <label class="block text-sm text-neutral-700">Message</label>
+        <textarea
+          rows="4"
+          class="mt-1 w-full rounded-xl border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-jp-salmon/40"
+          placeholder="Tell me about your current season..."
+        ></textarea>
+      </div>
+      <!-- Request a call styled the same navy -->
+      <button class="w-full btn btn-primary">Request a Call</button>
+      <p class="text-xs text-neutral-500">By submitting, you agree to a brief email follow-up.</p>
+    </form>
+  </div>
+</section>
+
 
   <footer class="border-t border-neutral-100 py-10 text-sm text-neutral-500">
     <div class="container container-bleed mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
